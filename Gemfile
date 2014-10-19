@@ -31,8 +31,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :production do
+
   # Use PostgreSQL as the database for Active Record
   gem 'pg'
+
+  # Serve static assets
+  gem 'rails_12factor'
+
 end
 
 group :development, :test do
