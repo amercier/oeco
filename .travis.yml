@@ -4,4 +4,4 @@ env:
 rvm:
   - 2.1.3
 before_script:
-  - psql -c 'create database oeco_database_development' -U postgres
+  - psql -c 'create database oeco_database_test' -U postgres
