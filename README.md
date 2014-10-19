@@ -12,7 +12,7 @@ Continuous integration is managed by Codeship.
 [ ![Codeship Status for amercier/oeco](https://codeship.io/projects/3a5506d0-399b-0132-7358-4e57ec3927cd/status)](https://codeship.io/projects/42234)
 
 Pushes on master branch are automatically deployed on
-[http://oeco.herokuapp.com](http://oeco-staging.herokuapp.com).
+[http://oeco-staging.herokuapp.com](http://oeco-staging.herokuapp.com).
 
 # Step 1: deploy to master
 
