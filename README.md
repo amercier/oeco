@@ -14,9 +14,9 @@ Continuous integration is managed by Codeship.
 Pushes on master branch are automatically deployed on
 [http://oeco.herokuapp.com](http://oeco-staging.herokuapp.com).
 
-# Step 1: deploy to staging
+# Step 1: deploy to master
 
-    git push staging
+    git push
 
 # Step 2: test at [http://oeco-staging.herokuapp.com](http://oeco-staging.herokuapp.com)
 
