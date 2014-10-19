@@ -2,8 +2,8 @@ require 'test_helper'
 
 class NewsControllerTest < ActionController::TestCase
   setup do
-    @news1 = news(:one)
-    @news2 = {
+    @news = news(:one)
+    @update = {
       url: 'url2',
       title: 'MyString 2',
       summary: 'MyString 2',
@@ -24,7 +24,7 @@ class NewsControllerTest < ActionController::TestCase
 
   test "should create news" do
     assert_difference('News.count') do
-      post :create, news: @news2
+      post :create, news: @update
       puts 'OK'
     end
 
@@ -32,23 +32,23 @@ class NewsControllerTest < ActionController::TestCase
   end
 
   test "should show news" do
-    get :show, id: @news1
+    get :show, id: @news
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @news1
+    get :edit, id: @news
     assert_response :success
   end
 
-  # test "should update news" do
-  #   patch :update, id: @news1, news: { order: @news2.order, summary: @news2.summary, title: @news2.title, url: @news2.url }
-  #   assert_redirected_to news_path(assigns(:news))
-  # end
+  test "should update news" do
+    patch :update, id: @news, news: @update
+    assert_redirected_to news_path(assigns(:news))
+  end
 
   test "should destroy news" do
     assert_difference('News.count', -1) do
-      delete :destroy, id: @news1
+      delete :destroy, id: @news
     end
 
     assert_redirected_to news_index_path
