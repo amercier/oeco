@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141019051930) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "news", force: true do |t|
     t.string   "url"
     t.string   "title"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141019051930) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "news", ["order"], name: "index_news_on_order", unique: true
-  add_index "news", ["url"], name: "index_news_on_url", unique: true
+  add_index "news", ["order"], name: "index_news_on_order", unique: true, using: :btree
+  add_index "news", ["url"], name: "index_news_on_url", unique: true, using: :btree
 
 end
