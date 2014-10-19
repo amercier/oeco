@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
-  title: MyString
-  summary: MyString
-  order: 1
-
-two:
-  url: MyString
-  title: MyString
-  summary: MyString
+  url: url1
+  title: MyString 1
+  summary: MyString 1
   order: 1
