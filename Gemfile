@@ -4,7 +4,11 @@ ruby "2.1.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta2'
 # Use SCSS for stylesheets
-gem 'sass', '3.3.14' # See https://github.com/sass/sass/issues/1028
+
+#gem 'sass'
+gem 'sass', '3.4.5'   # Fixes "undefined method `specificity'" error, see https://github.com/sass/sass/issues/1028
+#gem 'sass', '3.2.19' # Fixes "can't dump anonymous class" error, see https://github.com/sstephenson/sprockets/issues/507
+
 gem 'sass-rails', '~> 5.0.0.beta1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
