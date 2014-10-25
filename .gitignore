@@ -17,3 +17,7 @@
 
 # Ignore assets
 /public/assets
+
+# Ignore Bower components and node.js modules
+/bower_components
+/node_modules
