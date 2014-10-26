@@ -84,6 +84,9 @@ end
 # Development & testing
 # =====================
 
+# CodeClimate code coverage
+gem "codeclimate-test-reporter", group: :test
+
 group :development, :test do
 
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

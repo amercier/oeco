@@ -23,3 +23,6 @@
 
 # Ignore .dpl directory for production
 /.dpl
+
+# Ignore code coverage logs
+/coverage

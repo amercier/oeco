@@ -1,3 +1,9 @@
+# Start code coverage analysis only if CODECLIMATE_REPO_TOKEN is set
+if ENV.has_key? 'CODECLIMATE_REPO_TOKEN'
+  require "codeclimate-test-reporter"
+  CodeClimate::TestReporter.start
+end
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
