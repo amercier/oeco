@@ -12,10 +12,9 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
-
  */
 
+@import "settings";
 @import "compass/css3/transition";
 
 header {
@@ -26,6 +25,8 @@ header {
   }
 
   .nav-main {
+    margin-bottom: rem-calc(10);
+
     a {
       display: block;
       font-size: 1.2em;
@@ -39,3 +40,16 @@ header {
     }
   }
 }
+
+// .row {
+//   border: 2px solid red;
+// }
+// .columns {
+//   border: 2px dotted blue;
+// }
+// .columns .row {
+//   border-color: lightred;
+// }
+// .columns .columns {
+//   border-color: lightblue;
+// }
