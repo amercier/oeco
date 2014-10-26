@@ -1,7 +1,11 @@
-# Start code coverage analysis only if CODECLIMATE_REPO_TOKEN is set
+# Code coverage
 if ENV.has_key? 'CODECLIMATE_REPO_TOKEN'
+  # Enable reporting to Code Climate only if CODECLIMATE_REPO_TOKEN is set
   require "codeclimate-test-reporter"
   CodeClimate::TestReporter.start
+else
+  require 'simplecov'
+  SimpleCov.start 'rails'
 end
 
 ENV['RAILS_ENV'] ||= 'test'
