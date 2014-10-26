@@ -44,7 +44,7 @@ gem 'sass', '3.4.5'   # NOTE: Fixes "undefined method `specificity'" error, see 
 # ----------
 
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 
 # jQuery
 # ------
