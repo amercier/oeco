@@ -1,7 +1,24 @@
 language: ruby
+
 env:
   - DB=postgresql
+
 rvm:
   - 2.1.3
+
 before_script:
   - psql -c 'create database oeco_database_test' -U postgres
+
+deploy:
+  - provider: heroku
+    api_key:
+      secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
+    app: oeco-staging
+    on:
+      tags: false
+  - provider: heroku
+    api_key:
+      secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
+    app: oeco
+    on:
+      tags: true
