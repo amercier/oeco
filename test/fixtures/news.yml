@@ -5,3 +5,9 @@ one:
   title: MyString 1
   summary: MyString 1
   order: 1
+
+two:
+  url: url2
+  title: MyString 2
+  summary: MyString 2
+  order: 2
