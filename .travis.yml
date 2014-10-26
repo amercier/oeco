@@ -9,7 +9,7 @@ rvm:
 addons:
   code_climate:
     repo_token:
-      secure: "WIyvPYejilSlf+GTGMnOtKeFz01t667INGuaPguWkVm0nkBIYaedXrdnF2o6Hz/Xbji14Hozylh7oBIumC+37bw5/DQtoPHS8/EJ5zKOrOSGsYOciQRRNIhQkAKmNANqmBkM4Tr2EiWZeRcQKtJFtlBSXJ55RFUML+PON0RljbQ="
+      secure: "K0uONI4vqqle7wgOKkyr1JewCdokMWYMYTP7ZEFK8vsWcxry1wM2M+y0KVYbvGwteXfGB8VlZNaf2bBrVDaebCMLBmSNdChdU97Xtj2RSgcPWIi8hbeSUFQbfmHNXcCcsH5Qw0DByV/stz/2w+uH9wciTPnpl9kyXpqhRqyT2Kg="
 
 before_script:
   - psql -c 'create database oeco_database_test' -U postgres
