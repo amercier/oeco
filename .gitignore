@@ -17,3 +17,9 @@
 
 # Ignore assets
 /public/assets
+
+# Ignore external libraries
+/vendor
+
+# Ignore .dpl directory for production
+/.dpl
