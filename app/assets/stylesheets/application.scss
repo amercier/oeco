@@ -15,3 +15,27 @@
  *= require foundation_and_overrides
 
  */
+
+@import "compass/css3/transition";
+
+header {
+
+  .logo {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .nav-main {
+    a {
+      display: block;
+      font-size: 1.2em;
+      padding: 0.5em 0;
+      @include transition(color 0.1s ease-out, background-color 0.1s ease-out);
+
+      &:focus, &:active {
+        color: #fff; //$body-bg;
+        background-color: #333; // $body-font-color;
+      }
+    }
+  }
+}

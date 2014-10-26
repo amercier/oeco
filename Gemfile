@@ -40,6 +40,8 @@ gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'sass', '3.4.5'   # NOTE: Fixes "undefined method `specificity'" error, see https://github.com/sass/sass/issues/1028
 #gem 'sass', '3.2.19' # NOTE: Fixes "can't dump anonymous class" error, see https://github.com/sstephenson/sprockets/issues/507
 
+gem 'compass-rails'
+
 # Javascript
 # ----------
 
