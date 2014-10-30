@@ -7,14 +7,14 @@ oeco architectes website
 Continuous deployment
 ---------------------
 
-Continuous integration is managed by [Travis CI](https://travis-ci.org/amercier/oeco).
-Code analysis is performed by [Code Climate](https://codeclimate.com/github/amercier/oeco).
-Dependency tracking is managed by [Gemnasium](https://gemnasium.com/amercier/oeco).
+Continuous integration is managed by [Codeship](https://www.codeship.io/).
+Code analysis is performed by [Code Climate](https://codeclimate.com/).
+Dependency tracking is managed by [Gemnasium](https://gemnasium.com/).
 
-[![Build Status](https://travis-ci.org/amercier/oeco.svg?branch=master)](https://travis-ci.org/amercier/oeco)
-[![Code Climate](https://codeclimate.com/github/amercier/oeco/badges/gpa.svg)](https://codeclimate.com/github/amercier/oeco)
-[![Test Coverage](https://codeclimate.com/github/amercier/oeco/badges/coverage.svg)](https://codeclimate.com/github/amercier/oeco)
-[![Dependency Status](https://gemnasium.com/amercier/oeco.svg)](https://gemnasium.com/amercier/oeco)
+[![Build Status](http://img.shields.io/codeship/3a5506d0-399b-0132-7358-4e57ec3927cd.svg?style=flat-square)](https://travis-ci.org/amercier/oeco)
+[![Code Climate](http://img.shields.io/codeclimate/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
+[![Test Coverage](http://img.shields.io/codeclimate/coverage/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
+[![Dependency Status](http://img.shields.io/gemnasium/amercier/oeco.svg?style=flat-square)](https://gemnasium.com/amercier/oeco)
 
 Pushes on master branch are automatically deployed on
 [http://oeco-staging.herokuapp.com](http://oeco-staging.herokuapp.com).
