@@ -11,7 +11,7 @@ Continuous integration is managed by [Codeship](https://www.codeship.io/).
 Code analysis is performed by [Code Climate](https://codeclimate.com/).
 Dependency tracking is managed by [Gemnasium](https://gemnasium.com/).
 
-[![Build Status](http://img.shields.io/codeship/3a5506d0-399b-0132-7358-4e57ec3927cd.svg?style=flat-square)](https://travis-ci.org/amercier/oeco)
+[![Build Status](http://img.shields.io/codeship/3a5506d0-399b-0132-7358-4e57ec3927cd.svg?style=flat-square)](https://codeship.io/projects/42234)
 [![Code Climate](http://img.shields.io/codeclimate/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
 [![Test Coverage](http://img.shields.io/codeclimate/coverage/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
 [![Dependency Status](http://img.shields.io/gemnasium/amercier/oeco.svg?style=flat-square)](https://gemnasium.com/amercier/oeco)
