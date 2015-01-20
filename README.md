@@ -13,7 +13,7 @@ Dependency tracking is managed by [Gemnasium](https://gemnasium.com/).
 
 [![Build Status](http://img.shields.io/codeship/3a5506d0-399b-0132-7358-4e57ec3927cd.svg?style=flat-square)](https://codeship.io/projects/42234)
 [![Code Climate](http://img.shields.io/codeclimate/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
-[![Test Coverage](http://img.shields.io/codeclimate/coverage/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
+[![Test Coverage](http://img.shields.io/coveralls/amercier/oeco/master.svg?style=flat-square)](https://coveralls.io/r/amercier/oeco?branch=master)
 [![Dependency Status](http://img.shields.io/gemnasium/amercier/oeco.svg?style=flat-square)](https://gemnasium.com/amercier/oeco)
 
 Pushes on master branch are automatically deployed on
