@@ -1,37 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order: 0
-  url: inspiration-text-input-effects
-  title: Inspiration for text input effects
-  summary: Some inspiration for effects on text inputs using CSS transitions animations and pseudo-elements.
+  url: url1
+  title: MyString 1
+  summary: MyString 1
+  order: 1
 
 two:
-  order: 1
-  url: sliding-header-layout
-  title: Sliding header layout
-  summary: A tutorial on how to create a simple layout with a fullscreen header that slides up to reveal a content area with an image grid.
-
-three:
+  url: url2
+  title: MyString 2
+  summary: MyString 2
   order: 2
-  url: elastic-svg-elements
-  title: Elastic SVG elements
-  summary: Some inspiration for elastic components with SVG shape animations for enhanced UI interactions.
-
-four:
-  order: 3
-  url: inspiration-dialog-effects
-  title: Inspiration for dialog effects
-  summary: A small collection of dialog effects using CSS animations for your inspiration. Some effects use SVG animations of morphing paths with the help of Snap.svg.
-
-five:
-  order: 4
-  url: perspective-mockup-slideshow
-  title: Perspective mockup slideshow
-  summary: An animated perspective mockup slideshow with 3D transforms based on the computations made with the help of Franklin Ta's script.
-
-six:
-  order: 5
-  url: drag-and-drop-interaction-ideas
-  title: Drag and drop interaction ideas
-  summary: Some ideas for drag and drop interactions in a UI. The idea is to show a droppable area that stands for certain actions after an element is being dragged.
