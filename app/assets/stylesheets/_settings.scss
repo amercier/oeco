@@ -57,6 +57,9 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
+// Allows the use of Foundation default settings in your settings
+@import "foundation/settings";
+
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
@@ -64,6 +67,7 @@
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
 // $base-font-size: 100%;
+$base-font-size: 13px;
 
 // The $base-font-size is 100% while $base-line-height is 150%
 // $base-line-height: 150%;
@@ -87,23 +91,25 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family: "Lato";
+$font-family-sans-serif: $font-family, Helvetica, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-normal: 300 !default;
+$font-weight-bold: 700 !default;
+@import url("http://fonts.googleapis.com/css?family=#{$font-family}:#{$font-weight-normal},#{$font-weight-bold}");
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #333;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
-// $white       : #FFFFFF;
+$white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -120,12 +126,12 @@ $include-html-global-classes: $include-html-classes;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
-// $jet         : #222222;
+$jet         : #333333;
 // $black       : #000000;
 
 // We use these to control various global styles
-// $body-bg: $white;
-// $body-font-color: $jet;
+$body-bg: $white;
+$body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -140,8 +146,8 @@ $include-html-global-classes: $include-html-classes;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
-// $global-rounded: 1000px;
+$global-radius: 0;
+$global-rounded: 0px;
 
 // We use these to control inset shadow shiny edges and depressions.
 // $shiny-edge-size: 0 1px 0;
@@ -236,7 +242,7 @@ $include-html-global-classes: $include-html-classes;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
+$paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -876,11 +882,11 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, 0.8);
-// $orbit-caption-font-color: $white;
+$orbit-caption-bg: $body-bg;
+$orbit-caption-font-color: $body-font-color;
 // $orbit-caption-font-size: rem-calc(14);
-// $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
-// $orbit-caption-padding: rem-calc(10 14);
+$orbit-caption-position: "under"; // Supported values: "bottom", "under"
+$orbit-caption-padding: $paragraph-margin-bottom 0;
 // $orbit-caption-height: auto;
 
 // We use these to control the left/right nav styles
@@ -904,9 +910,9 @@ $include-html-global-classes: $include-html-classes;
 // $orbit-slide-number-padding: rem-calc(5);
 
 // Hide controls on small
-// $orbit-nav-hide-for-small: true;
-// $orbit-bullet-hide-for-small: true;
-// $orbit-timer-hide-for-small: true;
+$orbit-nav-hide-for-small: false;
+$orbit-bullet-hide-for-small: false;
+$orbit-timer-hide-for-small: false;
 
 // Graceful Loading Wrapper and preloader
 // $wrapper-class: "slideshow-wrapper";
@@ -1440,4 +1446,44 @@ $include-html-global-classes: $include-html-classes;
 // $include-legacy-visibility-classes: true;
 // $include-accessibility-classes: true;
 
-@import 'foundation';
+// @import 'foundation';
+// @import "foundation/_functions";
+// @import "foundation/_settings";
+
+@import "foundation/components/grid";
+// @import "foundation/components/accordion";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/button-groups";
+@import "foundation/components/buttons";
+// @import "foundation/components/clearing";
+// @import "foundation/components/dropdown";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/flex-video";
+@import "foundation/components/forms";
+// @import "foundation/components/icon-bar";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/joyride";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/magellan";
+@import "foundation/components/orbit";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/range-slider";
+// @import "foundation/components/reveal";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/split-buttons";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switches";
+// @import "foundation/components/tables";
+// @import "foundation/components/tabs";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/top-bar";
+@import "foundation/components/type";
+// @import "foundation/components/offcanvas";
+// @import "foundation/components/visibility";

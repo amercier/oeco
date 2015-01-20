@@ -40,11 +40,14 @@ gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'sass', '3.4.5'   # NOTE: Fixes "undefined method `specificity'" error, see https://github.com/sass/sass/issues/1028
 #gem 'sass', '3.2.19' # NOTE: Fixes "can't dump anonymous class" error, see https://github.com/sstephenson/sprockets/issues/507
 
+gem 'compass-rails'
+
 # Javascript
 # ----------
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'therubyracer', platforms: :ruby
 
 # jQuery
 # ------
@@ -53,7 +56,6 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
 
 
 # Database
