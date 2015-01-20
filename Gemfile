@@ -27,18 +27,12 @@ gem 'bcrypt'
 # ======
 
 # Zurb Foundation
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.5.0.0'
 
 # Sass
 # ----
 
-# TODO: Bump sass-rails to stable version once available
-gem 'sass-rails', '~> 5.0.0.beta1'
-
-# TODO: Remove sass dependency once sass/sass#1028 has been fixed
-# FIXME: Fix sstephenson/sprockets#507
-gem 'sass', '3.4.5'   # NOTE: Fixes "undefined method `specificity'" error, see https://github.com/sass/sass/issues/1028
-#gem 'sass', '3.2.19' # NOTE: Fixes "can't dump anonymous class" error, see https://github.com/sstephenson/sprockets/issues/507
+gem 'sass-rails', '~> 5.0.1'
 
 # Javascript
 # ----------
