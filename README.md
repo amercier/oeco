@@ -7,8 +7,9 @@ oeco architectes website
 Continuous deployment
 ---------------------
 
-Continuous integration is managed by [Codeship](https://www.codeship.io/).
+Continuous integration is managed by [Travis CI](https://travis-ci.org/).
 Code analysis is performed by [Code Climate](https://codeclimate.com/).
+Code coverage is reported to [Coveralls](https://coveralls.io/).
 Dependency tracking is managed by [Gemnasium](https://gemnasium.com/).
 
 [![Build Status](http://img.shields.io/codeship/3a5506d0-399b-0132-7358-4e57ec3927cd.svg?style=flat-square)](https://codeship.io/projects/42234)
