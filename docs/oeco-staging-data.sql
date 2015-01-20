@@ -1,7 +1,6 @@
 BEGIN;
 
 TRUNCATE TABLE news;
-
 INSERT INTO news ("url", "title", "summary", "order", "created_at", "updated_at") VALUES
 ('liget', 'Musée d''Ethnographie', 'Projet finaliste du concours international LIGET BUDAPEST', 0, '2015-01-19 17:18:00', '2015-01-19 17:18:00'),
 ('cabestany', 'Contruction de l''espace jeunesse et centre d''hébergement collectif de Cabestany (Pyrénées Orientales)', 'Projet Lauréat, démarrage du chantier printemps 2015', 1, '2015-01-19 17:18:00', '2015-01-19 17:18:00'),
@@ -11,6 +10,7 @@ INSERT INTO news ("url", "title", "summary", "order", "created_at", "updated_at"
 ('entrevue', 'Conférence', 'Oeco-Architectes & W-Architectures. Echanges autour de différents parcours de conception au CMAV, à Toulouse', 5, '2015-01-19 17:18:00', '2015-01-19 17:18:00'),
 ('bureaux-l', 'Bureaux L, bureaux pour des agriculteurs à Liposthey (Landes)', 'Prix de la Première Oeuvre Le Moniteur 2011 - Vanessa Larrère Architecte', 6, '2015-01-19 17:18:00', '2015-01-19 17:18:00');
 
+TRUNCATE TABLE categories;
 INSERT INTO categories ("name", "created_at", "updated_at") VALUES
 ('Culturel', '2015-01-19 19:33:00', '2015-01-19 19:33:00'),
 ('éducation', '2015-01-19 19:33:00', '2015-01-19 19:33:00'),
@@ -19,5 +19,9 @@ INSERT INTO categories ("name", "created_at", "updated_at") VALUES
 ('Sport', '2015-01-19 19:33:00', '2015-01-19 19:33:00'),
 ('Tertiaire', '2015-01-19 19:33:00', '2015-01-19 19:33:00'),
 ('Urbanisme', '2015-01-19 19:33:00', '2015-01-19 19:33:00');
+
+TRUNCATE TABLE users;
+INSERT INTO users ("email", "password_digest", "name", "created_at", "updated_at") VALUES
+('alexandre.mercier12@gmail.com', '$2a$10$ql4csMTgLbToAlohiFLb5ucfH/r70h4OIfv9f6n1mxcKVQCq5qSM.', 'Alex Mercier', '2015-01-19 20:21:00', '2015-01-19 20:21:00');
 
 COMMIT;
