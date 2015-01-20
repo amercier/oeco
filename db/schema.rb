@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120035821) do
+ActiveRecord::Schema.define(version: 20150120044322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20150120035821) do
 
   add_index "news", ["order"], name: "index_news_on_order", unique: true, using: :btree
   add_index "news", ["url"], name: "index_news_on_url", unique: true, using: :btree
+
+  create_table "properties", force: true do |t|
+    t.string   "name"
+    t.integer  "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "properties", ["name"], name: "index_properties_on_name", unique: true, using: :btree
+  add_index "properties", ["order"], name: "index_properties_on_order", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
