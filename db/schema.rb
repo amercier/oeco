@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120044322) do
+ActiveRecord::Schema.define(version: 20150120054614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20150120044322) do
 
   add_index "news", ["order"], name: "index_news_on_order", unique: true, using: :btree
   add_index "news", ["url"], name: "index_news_on_url", unique: true, using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "url"
+    t.string   "title"
+    t.string   "summary"
+    t.string   "content"
+    t.boolean  "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "projects", ["url"], name: "index_projects_on_url", unique: true, using: :btree
 
   create_table "properties", force: true do |t|
     t.string   "name"
