@@ -16,6 +16,7 @@ deploy:
       secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
     app: oeco-staging
     on:
+      all_branches: true
       tags: false
     strategy: git
     run:
