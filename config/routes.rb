@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :projects
+
+  resources :properties
+
+  resources :users
+
   resources :categories
 
   resources :news
