@@ -24,4 +24,15 @@ TRUNCATE TABLE users;
 INSERT INTO users ("email", "password_digest", "name", "created_at", "updated_at") VALUES
 ('alexandre.mercier12@gmail.com', '$2a$10$ql4csMTgLbToAlohiFLb5ucfH/r70h4OIfv9f6n1mxcKVQCq5qSM.', 'Alex Mercier', '2015-01-19 20:21:00', '2015-01-19 20:21:00');
 
+TRUNCATE TABLE properties;
+INSERT INTO properties ("name", "order", "created_at", "updated_at") VALUES
+('Surface', 6, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Budget', 5, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Client', 4, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Cotraitants', 8, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Localisation', 2, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Programme', 1, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Phase', 7, '2015-01-19 21:09:00', '2015-01-19 21:09:00'),
+('Année', 3, '2015-01-19 21:09:00', '2015-01-19 21:09:00');
+
 COMMIT;
