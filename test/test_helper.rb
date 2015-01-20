@@ -1,12 +1,20 @@
-# Code coverage
+# Coveralls code coverage
+if ENV.has_key? 'COVERALLS_REPO_TOKEN'
+  require 'coveralls'
+  Coveralls.wear!
+end
+
+# Code Climate code coverage
 if ENV.has_key? 'CODECLIMATE_REPO_TOKEN'
   # Enable reporting to Code Climate only if CODECLIMATE_REPO_TOKEN is set
-  require "codeclimate-test-reporter"
+  require 'codeclimate-test-reporter'
   CodeClimate::TestReporter.start
 else
   require 'simplecov'
   SimpleCov.start 'rails'
 end
+
+# Coverall
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
