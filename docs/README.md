@@ -1,7 +1,14 @@
 
+Staging environment
+-------------------
+
+    heroku rake db:rollback --app oeco-staging
+
 
 Model
 -----
 
-rails g scaffold Category name:string:uniq
-rake db:migrate
+### Category
+
+    rails g scaffold Category name:string:uniq
+    rake db:migrate
