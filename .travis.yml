@@ -3,40 +3,42 @@ language: ruby
 cache: bundler
 env:
   global:
-    - DB=postgresql
-    - secure: "owvre6vIwcQzL/2ZwBb/VUaWJ+J+5zlkon3Ovg+FjQq2N/v1khls+hdsph9bOI1gHWj+JJgcseDZSZnLm6jvxlQ8VNHkCXFZLOUFjaijN+3AGe5zHQaxsoFQHd5XXdV+IdGvP21MlATVuWU2VRRpWDPSVYtu/73oZRtb7TUMBIc="
+  - DB=postgresql
+  - secure: owvre6vIwcQzL/2ZwBb/VUaWJ+J+5zlkon3Ovg+FjQq2N/v1khls+hdsph9bOI1gHWj+JJgcseDZSZnLm6jvxlQ8VNHkCXFZLOUFjaijN+3AGe5zHQaxsoFQHd5XXdV+IdGvP21MlATVuWU2VRRpWDPSVYtu/73oZRtb7TUMBIc=
+  - secure: J6BD0cL+oWUCzVd6mR3i6mHktyazuoF1ruz4Q2fM3yL9jKpy8OQRhuhzdghpQOhY6HyCVhJQvr3nN6RuMOgimdepWSCt6kqbZKzPAz236qAM0XUlXCBJTTbWfPhUEZVdK76zTsGcIZNmPg+Pir88qV0uDCg8UDAykqthXxzjQ+A=
+  - secure: HddMXqUftj0qa55TdnLFs/tH+7NuJOo8lBnt/tYekyt/XuMT5uK3UJNcJfCZ1MowyT9RbBssmLiXD2CMj/UmMB4kgbNvLNldBUPsjYSeRT4W0ggrO3b4J9sEqnfS1N5GTqMnjplRyu3Td8QVHX4cd6/30HuH75TrUu+V9AGT48E=
 rvm:
-  - 2.1.3
+- 2.1.3
 addons:
   code_climate:
     repo_token:
-      secure: "K0uONI4vqqle7wgOKkyr1JewCdokMWYMYTP7ZEFK8vsWcxry1wM2M+y0KVYbvGwteXfGB8VlZNaf2bBrVDaebCMLBmSNdChdU97Xtj2RSgcPWIi8hbeSUFQbfmHNXcCcsH5Qw0DByV/stz/2w+uH9wciTPnpl9kyXpqhRqyT2Kg="
+      secure: K0uONI4vqqle7wgOKkyr1JewCdokMWYMYTP7ZEFK8vsWcxry1wM2M+y0KVYbvGwteXfGB8VlZNaf2bBrVDaebCMLBmSNdChdU97Xtj2RSgcPWIi8hbeSUFQbfmHNXcCcsH5Qw0DByV/stz/2w+uH9wciTPnpl9kyXpqhRqyT2Kg=
 before_script:
-  - psql -c 'create database oeco_database_test' -U postgres
+- psql -c 'create database oeco_database_test' -U postgres
 deploy:
-  - provider: heroku
-    api_key:
-      secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
-    app: oeco-staging
-    on:
-      all_branches: true
-      tags: false
-    strategy: git
-    run:
-      - "rake db:migrate"
-      - restart
-      - "rake cleanup"
-  - provider: heroku
-    api_key:
-      secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
-    app: oeco
-    on:
-      all_branches: true
-      tags: true
-    strategy: git
-    run:
-      - "rake db:migrate"
-      - restart
-      - "rake cleanup"
-after_deploy:
-  curl -vsf -o /dev/null "http://oeco$([ "$TRAVIS_TAG" == "" ] && echo "-staging").herokuapp.com/" || exit $?
+- provider: heroku
+  api_key:
+    secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
+  app: oeco-staging
+  on:
+    all_branches: true
+    tags: false
+  strategy: git
+  run:
+  - rake db:migrate
+  - restart
+  - rake cleanup
+- provider: heroku
+  api_key:
+    secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
+  app: oeco
+  on:
+    all_branches: true
+    tags: true
+  strategy: git
+  run:
+  - rake db:migrate
+  - restart
+  - rake cleanup
+after_deploy: curl -vsf -o /dev/null "http://$([ "$TRAVIS_TAG" == "" ] && echo "$OECO_STAGING_USERNAME:$OECO_STAGING_PASSWORD@oeco-staging"
+  || echo "oeco").herokuapp.com/" || exit $?
