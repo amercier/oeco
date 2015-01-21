@@ -4,7 +4,7 @@ cache: bundler
 env:
   global:
     - DB=postgresql
-    - secure: "AtvQZD7f5WX32OfGPeCXLSOM1oMkExH9XPRDVU47J13JdPJt+dFihdCd+wJspLFtyr/Q5qW2OdDWO7sgaXgT0IDMleHJSAP9clR/cS8iYKJZvzzIkw6cCicjVHzf7UILHlk58CAjJXBizyrIrPoRjNJ02zJ3U91aUb40FNHL62g="
+    - secure: "owvre6vIwcQzL/2ZwBb/VUaWJ+J+5zlkon3Ovg+FjQq2N/v1khls+hdsph9bOI1gHWj+JJgcseDZSZnLm6jvxlQ8VNHkCXFZLOUFjaijN+3AGe5zHQaxsoFQHd5XXdV+IdGvP21MlATVuWU2VRRpWDPSVYtu/73oZRtb7TUMBIc="
 rvm:
   - 2.1.3
 addons:
