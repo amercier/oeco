@@ -4,6 +4,7 @@ formatters = [ SimpleCov::Formatter::HTMLFormatter ]
 # Coveralls code coverage
 if ENV.has_key? 'COVERALLS_REPO_TOKEN'
   require 'coveralls'
+  Coveralls::Output::silent = true
   formatters.push(Coveralls::SimpleCov::Formatter)
 end
 
