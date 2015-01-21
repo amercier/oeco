@@ -46,12 +46,12 @@ Staging environment:
 
     git remote add staging git@heroku.com:oeco-staging.git
     git push staging
-    heroku run rake db:migrate --app oeco-staging
+    heroku run rake db:setup --app oeco-staging
     heroku run rake db:migrate --app oeco-staging
 
 Production environment:
 
     git remote add production git@heroku.com:oeco.git
     git push production
-    heroku run rake db:migrate --app oeco
+    heroku run rake db:setup --app oeco
     heroku run rake db:migrate --app oeco
