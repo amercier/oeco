@@ -39,4 +39,4 @@ deploy:
       - restart
       - "rake cleanup"
 after_deploy:
-  curl -vsf -o /dev/null "http://oeco$([ "$TRAVIS_TAG" == "" ] && echo "-staging").herokuapp.com/"
+  curl -vsf -o /dev/null "http://oeco$([ "$TRAVIS_TAG" == "" ] && echo "-staging").herokuapp.com/" || exit $?
