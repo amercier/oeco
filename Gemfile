@@ -6,7 +6,6 @@ ruby "2.1.3"
 # =====
 
 # To use bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# TODO: Bump rails to 4.2.0 stable version once available
 gem 'rails', '~> 4.2.0'
 
 # Turbolinks makes following links in your web application faster
