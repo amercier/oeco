@@ -56,6 +56,18 @@ class CategoriesControllerTest < ActionController::TestCase
     assert_redirected_to category_path(assigns(:category))
   end
 
+  test "should not update category if name already exists" do
+    assert_nothing_raised do
+      assert_no_difference('Category.count') do
+        patch :update, id: @category2, category: @existing_name
+      end
+    end
+    assert_not_nil assigns(:category)
+    assert_not_empty assigns(:category).errors.messages
+    assert_equal assigns(:category).errors.messages, {:name=>['has already been taken']}
+    assert flash.empty?
+  end
+
   test "should destroy category" do
     assert_difference('Category.count', -1) do
       delete :destroy, id: @category1

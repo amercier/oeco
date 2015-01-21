@@ -58,6 +58,18 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to user_path(assigns(:user))
   end
 
+  test "should not update user if email already exists" do
+    assert_nothing_raised do
+      assert_no_difference('Category.count') do
+        patch :update, id: @user2, user: @existing_email
+      end
+    end
+    assert_not_nil assigns(:user)
+    assert_not_empty assigns(:user).errors.messages
+    assert_equal assigns(:user).errors.messages, {:email=>['has already been taken'], :password=>[], :password_confirmation=>[], :name=>[]}
+    assert flash.empty?
+  end
+
   test "should destroy user" do
     assert_difference('User.count', -1) do
       delete :destroy, id: @user1

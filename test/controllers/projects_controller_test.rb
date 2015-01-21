@@ -43,7 +43,7 @@ class ProjectsControllerTest < ActionController::TestCase
     end
     assert_not_nil assigns(:project)
     assert_not_empty assigns(:project).errors.messages
-    assert_equal assigns(:project).errors.messages, {:url => ['has already been taken'], :title=>[], :summary=>[], :content=>[], :published=>[] }
+    assert_equal assigns(:project).errors.messages, {:url => ['has already been taken'], :title=>[], :summary=>[], :content=>[], :published=>[]}
     assert flash.empty?
   end
 
@@ -60,6 +60,18 @@ class ProjectsControllerTest < ActionController::TestCase
   test "should update project" do
     patch :update, id: @project, project: @update
     assert_redirected_to project_path(assigns(:project))
+  end
+
+  test "should not update project if url already exists" do
+    assert_nothing_raised do
+      assert_no_difference('Project.count') do
+        patch :update, id: @project2, project: @existing_url
+      end
+    end
+    assert_not_nil assigns(:project)
+    assert_not_empty assigns(:project).errors.messages
+    assert_equal assigns(:project).errors.messages, {:url=>['has already been taken'], :title=>[], :summary=>[], :content=>[], :published=>[]}
+    assert flash.empty?
   end
 
   test "should destroy project" do

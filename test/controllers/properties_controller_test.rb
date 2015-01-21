@@ -70,6 +70,30 @@ class PropertiesControllerTest < ActionController::TestCase
     assert_redirected_to property_path(assigns(:property))
   end
 
+  test "should not update property if name already exists" do
+    assert_nothing_raised do
+      assert_no_difference('Category.count') do
+        patch :update, id: @property2, property: @existing_name
+      end
+    end
+    assert_not_nil assigns(:property)
+    assert_not_empty assigns(:property).errors.messages
+    assert_equal assigns(:property).errors.messages, {:name=>['has already been taken'], :order=>[]}
+    assert flash.empty?
+  end
+
+  test "should not update property if order already exists" do
+    assert_nothing_raised do
+      assert_no_difference('Category.count') do
+        patch :update, id: @property2, property: @existing_order
+      end
+    end
+    assert_not_nil assigns(:property)
+    assert_not_empty assigns(:property).errors.messages
+    assert_equal assigns(:property).errors.messages, {:name=>[], :order=>['has already been taken']}
+    assert flash.empty?
+  end
+
   test "should destroy property" do
     assert_difference('Property.count', -1) do
       delete :destroy, id: @property1
