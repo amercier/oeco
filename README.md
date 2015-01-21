@@ -48,6 +48,9 @@ Staging environment:
     git push staging
     heroku run rake db:setup --app oeco-staging
     heroku run rake db:migrate --app oeco-staging
+    heroku config:add STAGING=true --app oeco-staging
+    heroku config:add USERNAME=oeco --app oeco-staging
+    heroku config:add PASSWORD=[secure] --app oeco-staging
 
 Production environment:
 
