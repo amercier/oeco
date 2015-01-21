@@ -40,5 +40,4 @@ deploy:
   - rake db:migrate
   - restart
   - rake cleanup
-after_deploy: curl -vsf -o /dev/null "http://$([ "$TRAVIS_TAG" == "" ] && echo "$OECO_STAGING_USERNAME:$OECO_STAGING_PASSWORD@oeco-staging"
-  || echo "oeco").herokuapp.com/" || exit $?
+after_deploy: curl -sf -o /dev/null -w '%{http_code}\n' "http://$([ "$TRAVIS_TAG" == "" ] && echo "$OECO_STAGING_USERNAME:$OECO_STAGING_PASSWORD@oeco-staging" || echo "oeco").herokuapp.com/" || exit $?
