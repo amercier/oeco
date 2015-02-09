@@ -1,19 +1,18 @@
 Rails.application.routes.draw do
-  resources :projects
-
-  resources :properties
-
-  resources :users
-
-  resources :categories
-
-  resources :news
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'news#index'
+  # root 'news#index'
+
+  namespace :admin do
+    resources :projects
+    resources :properties
+    resources :users
+    resources :categories
+    resources :news
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
