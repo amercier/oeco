@@ -1,0 +1,13 @@
+<ul class="oeco-news" data-orbit data-options="timer_speed:5000;slide_number:false;pause_on_hover:false">
+  <% @news.each do |news| %>
+    <li>
+      <!-- <figure> -->
+        <%= image_tag 'http://dummyimage.com/970x620/318CE7/fff.jpg', :size => '970x620', :alt => 'slide 1' %>
+        <div class="oeco-news-caption orbit-caption">
+          <h4 class="oeco-news-title"><%= news.title %></h4>
+          <p class="oeco-news-summary"><%= news.summary %></p>
+        </div>
+      <!-- </figure> -->
+    </li>
+  <% end %>
+</ul>

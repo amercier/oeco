@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <body>
+<body>
 
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-  </body>
+  <div class="oeco-header row">
+    <div class="small-12 medium-5 medium-offset-1 columns">
+      <%= link_to root_path do %>
+        <%= image_tag 'oeco.jpg', :size => '280x130', :alt => 'oeco architectes' %>
+      <% end %>
+    </div>
+
+    <nav class="oeco-nav small-12 medium-5 columns end">
+      <ul>
+        <li><a href="#">Projets</a></li>
+        <li><a href="#">Agence</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="oeco-content small-12 medium-10 medium-offset-1 columns">
+      <%= yield %>
+    </div>
+  </div>
+
+  <%= javascript_include_tag "application" %>
+</body>
 </html>
