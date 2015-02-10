@@ -12,3 +12,11 @@
     color: inherit;
   }
 }
+
+[data-orbit] {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+  &.ready {
+    opacity: 1;
+  }
+}

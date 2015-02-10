@@ -17,5 +17,8 @@
 //= require_tree .
 
 $(function(){
+  $(document).on('ready.fndtn.orbit', function(event) {
+    $(event.target).find('[data-orbit]').addClass('ready');
+  });
   $(document).foundation();
 });
