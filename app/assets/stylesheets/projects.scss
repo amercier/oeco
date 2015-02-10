@@ -1,0 +1,53 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.oeco-projects {
+  .oeco-projects-item {
+    margin-bottom: 10px;
+
+    .oeco-projects-figure {
+      position: relative;
+
+      .oeco-projects-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.3em 0.5em;
+        background: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+        color: #fff;
+      }
+    }
+  }
+}
+
+.no-touch.csstransforms {
+  .oeco-projects {
+    .oeco-projects-item {
+      margin-bottom: 10px;
+
+      .oeco-projects-figure {
+        overflow: hidden;
+
+        .oeco-projects-caption {
+          bottom: auto;
+          top: 100%;
+          transition: transform .2s ease-out, opacity .7s ease;
+          opacity: 0;
+        }
+      }
+
+      &:hover, &:focus {
+        .oeco-projects-figure {
+          .oeco-projects-caption {
+            transform: translateY(-100%);
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+}

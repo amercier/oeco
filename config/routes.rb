@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get 'projets' => 'projects#index', as: :projects
+  get 'projets/:url' => 'projects#project', as: :project
+  get 'agence' => 'agency#index', as: :agency
+
   namespace :admin do
     resources :projects
     resources :properties

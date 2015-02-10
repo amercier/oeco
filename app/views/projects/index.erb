@@ -1,0 +1,13 @@
+<div class="oeco-projects">
+  <% @projects.each_with_index do |project, i| %>
+    <a class="oeco-projects-item small-12 medium-4 large-3 columns <%= ' end' if i === @projects.length - 1 %>">
+      <figure class="oeco-projects-figure">
+        <%= image_tag 'http://dummyimage.com/800x600/318CE7/fff.jpg',
+          :size => '800x600',
+          :alt => project.title
+        %>
+        <figcaption class="oeco-projects-caption"><%= project.title %></figcaption>
+      </figure>
+    </a>
+  <% end %>
+</div>

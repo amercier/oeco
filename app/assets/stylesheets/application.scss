@@ -12,10 +12,18 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
  */
 
 @import "foundation_and_overrides";
+
+body {
+  margin-bottom: 4em;
+}
+
+figure {
+  display: block;
+  margin: 0;
+}
 
 .oeco-header {
   margin-top: 4em;

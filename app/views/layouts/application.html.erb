@@ -14,22 +14,22 @@
 <body>
 
   <div class="oeco-header row">
-    <div class="small-12 medium-5 medium-offset-1 columns">
+    <div class="small-12 medium-6 columns">
       <%= link_to root_path do %>
         <%= image_tag 'oeco.jpg', :size => '280x130', :alt => 'oeco architectes' %>
       <% end %>
     </div>
 
-    <nav class="oeco-nav small-12 medium-5 columns end">
+    <nav class="oeco-nav small-12 medium-6 columns end">
       <ul>
-        <li><a href="#">Projets</a></li>
+        <li><%= link_to 'Projets', projects_path %></li>
         <li><a href="#">Agence</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="row">
-    <div class="oeco-content small-12 medium-10 medium-offset-1 columns">
+    <div class="oeco-content small-12 medium-12 columns">
       <%= yield %>
     </div>
   </div>
