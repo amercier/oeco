@@ -1,0 +1,3 @@
+<% @project['content'].split('\n\n').each do |paragraph| %>
+  <p><%= paragraph.gsub('\n', '<br>').html_safe %></p>
+<% end %>

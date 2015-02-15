@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'projets' => 'projects#index', as: :projects
-  get 'projets/:url' => 'projects#project', as: :project
+  get 'projets/:url' => 'projects#show', as: :project
   get 'agence' => 'agency#index', as: :agency
 
   namespace :admin do
