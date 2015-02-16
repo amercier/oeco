@@ -1,9 +1,8 @@
 @import "settings";
 
-.#{$app-ns}header {
-  margin-top: 4em;
+.oeco-header {
 
-  .#{$app-ns}nav {
+  .oeco-nav {
     li {
       display: inline-block;
 
@@ -12,12 +11,11 @@
           color: inherit;
           font-weight: $font-weight-normal;
           text-decoration: none;
-          &.active {
-            font-weight: $font-weight-bold;
-          }
         }
+        &.active,
         &:hover, &:focus {
-          font-weight: $font-weight-bold;
+          font-weight: $font-weight-normal;
+          text-decoration: underline;
         }
       }
     }
@@ -25,12 +23,12 @@
 }
 
 @media #{$small-up} {
-  .#{$app-ns}header {
+  .oeco-header {
     img {
       display: block;
       margin: 0 auto;
     }
-    .#{$app-ns}nav {
+    .oeco-nav {
       margin-top: 3em;
       text-align: center;
       ul {
@@ -43,19 +41,19 @@
     }
   }
 
-  .#{$app-ns}content {
+  .oeco-content {
     margin-top: 4em;
   }
 }
 
 // Medium
 @media #{$medium-up} {
-  .#{$app-ns}header {
+  .oeco-header {
     img {
       margin: 0;
     }
 
-    .#{$app-ns}nav {
+    .oeco-nav {
       text-align: right;
       margin-top: 100px; // TODO: calc
       a {

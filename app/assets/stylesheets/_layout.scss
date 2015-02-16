@@ -1,0 +1,27 @@
+@import "settings";
+
+@media #{$small-up} {
+  body {
+    margin: $oeco-vertical-padding-small $oeco-horizontal-padding-small;
+  }
+
+  .oeco-container {
+    font-size: rem-calc($oeco-font-size-small);
+  }
+}
+
+@media #{$medium-up} {
+  body {
+    margin: $oeco-vertical-padding-medium $oeco-horizontal-padding-medium;
+  }
+
+  .oeco-container {
+    font-size: rem-calc($oeco-font-size-medium);
+  }
+}
+
+@media #{$large-up} {
+  body {
+    margin: $oeco-vertical-padding-large $oeco-horizontal-padding-large;
+  }
+}

@@ -1,0 +1,28 @@
+@import "settings";
+
+a {
+  &:link, &:visited {
+    color: inherit;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+  }
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+@media #{$small-up} {
+  .oeco-container {
+    font-size: rem-calc($oeco-font-size-small);
+  }
+}
+
+@media #{$medium-up} {
+  .oeco-container {
+    font-size: rem-calc($oeco-font-size-medium);
+  }
+}

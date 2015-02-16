@@ -16,26 +16,15 @@
 @import "settings";
 @import "foundation";
 
+@import "layout";
 @import "header";
+@import "typography";
 
 body {
   margin-bottom: 4em;
-  margin-right: 1em;
-  margin-left: 1em;
 }
 
 figure {
   display: block;
   margin: 0;
-}
-
-a {
-  &:link, &:visited {
-    color: inherit;
-    font-weight: $font-weight-bold;
-    text-decoration: none;
-  }
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
 }
