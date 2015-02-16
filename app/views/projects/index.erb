@@ -1,6 +1,6 @@
 <div class="oeco-projects">
   <% @projects.each_with_index do |project, i| %>
-    <%= link_to project_path(project), {
+    <%= link_to project_path(project.url), {
         :class => 'oeco-projects-item small-12 medium-4 large-3 columns' + (i === @projects.length - 1 ? ' end' : '')
       } do
     %>
