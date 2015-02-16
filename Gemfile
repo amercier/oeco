@@ -21,6 +21,8 @@ gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Helpers
+gem 'active_link_to'
 
 # Assets
 # ======

@@ -12,10 +12,14 @@ $oeco-horizontal-padding-large: 10em;
 $oeco-vertical-padding-small: 4em;
 $oeco-vertical-padding-medium: 4em;
 $oeco-vertical-padding-large: 4em;
+$oeco-logo-height: 130px;
 
 // Typography
 $oeco-font-size-small: 14;
 $oeco-font-size-medium: 14;
+
+$oeco-header-font-size-small: 18;
+$oeco-header-font-size-medium: 16;
 
 // Zurb Foundation settings
 // ------------------------
@@ -82,7 +86,7 @@ $oeco-font-size-medium: 14;
 // $base-font-size: 100%;
 
 // The $base-font-size is 100% while $base-line-height is 150%
-$base-line-height: 170%;
+$base-line-height: 28px;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
@@ -110,7 +114,7 @@ $font-family-sans-serif: Roboto, sans-serif;
 // We use these to define default font weights
 $font-weight-light: 100 !default;
 $font-weight-normal: 300 !default;
-$font-weight-bold: bold !default;
+$font-weight-bold: 500 !default;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;

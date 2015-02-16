@@ -1,21 +1,27 @@
 @import "settings";
 
 .oeco-header {
+  text-transform: lowercase;
 
   .oeco-nav {
-    li {
-      display: inline-block;
+    ul {
+      padding: 0;
+      li {
+        display: inline-block;
 
-      a {
-        &:link, &:visited {
-          color: inherit;
-          font-weight: $font-weight-normal;
-          text-decoration: none;
-        }
-        &.active,
-        &:hover, &:focus {
-          font-weight: $font-weight-normal;
-          text-decoration: underline;
+        a {
+          height: #{$base-line-height};
+          &:link, &:visited {
+            color: inherit;
+            font-weight: $font-weight-normal;
+            text-decoration: none;
+          }
+          &.active,
+          &:hover, &:focus {
+            font-weight: $font-weight-normal;
+            font-weight: $font-weight-bold;
+            text-decoration: none;
+          }
         }
       }
     }
@@ -36,7 +42,7 @@
       }
       a {
         margin: 0 1em;
-        font-size: 1.3em;
+        font-size: rem-calc($oeco-header-font-size-small);
       }
     }
   }
@@ -49,16 +55,23 @@
 // Medium
 @media #{$medium-up} {
   .oeco-header {
+
+
     img {
       margin: 0;
     }
 
     .oeco-nav {
-      text-align: right;
-      margin-top: 100px; // TODO: calc
-      a {
-        margin-right: 0;
-        margin-left: 2em;
+      margin-top: 0;
+      padding-top: #{$oeco-logo-height - $base-line-height};
+      ul {
+        text-align: right;
+
+        a {
+          margin-right: 0;
+          margin-left: 1em;
+          font-size: rem-calc($oeco-header-font-size-medium);
+        }
       }
     }
   }

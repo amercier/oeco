@@ -23,8 +23,8 @@
 
     <nav class="oeco-nav small-12 medium-6 columns end">
       <ul>
-        <li><%= link_to 'Projets', projects_path %></li>
-        <li><a href="#">Agence</a></li>
+        <li><%= active_link_to 'Projets', projects_path, :active => :inclusive %></li>
+        <li><%= active_link_to 'Agence', '/agence', :active => :inclusive %></li>
       </ul>
     </nav>
   </div>
