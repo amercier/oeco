@@ -15,8 +15,8 @@ $oeco-vertical-padding-large: 4em;
 $oeco-logo-height: 130px;
 
 // Typography
-$oeco-font-size-small: 14;
-$oeco-font-size-medium: 14;
+$oeco-font-size-small: 16;
+$oeco-font-size-medium: 15;
 
 $oeco-header-font-size-small: 18;
 $oeco-header-font-size-medium: 16;
@@ -86,7 +86,7 @@ $oeco-header-font-size-medium: 16;
 // $base-font-size: 100%;
 
 // The $base-font-size is 100% while $base-line-height is 150%
-$base-line-height: 28px;
+$base-line-height: 24px;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
@@ -107,7 +107,7 @@ $column-gutter: rem-calc(10);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: Roboto, sans-serif;
+$font-family-sans-serif: Helvetica Neue, Helvetica, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
