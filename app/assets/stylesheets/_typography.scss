@@ -1,5 +1,11 @@
 @import "settings";
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-lighter;
+  text-transform: uppercase;
+  margin-bottom: 2.2rem;
+}
+
 a {
   &:link, &:visited {
     color: inherit;
@@ -15,14 +21,25 @@ p {
   text-align: justify;
 }
 
-@media #{$small-up} {
-  .oeco-container {
-    font-size: rem-calc($oeco-font-size-small);
+aside {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
   }
-}
 
-@media #{$medium-up} {
-  .oeco-container {
-    font-size: rem-calc($oeco-font-size-medium);
+  h2 {
+    color: #999;
+    margin: 2.2rem 0;
+  }
+
+  h3 {
+    font-weight: $font-weight-bold;
+    text-transform: lowercase;
+  }
+
+  a {
+    &:link, &:visited {
+      font-weight: $font-weight-normal;
+      text-decoration: underline;
+    }
   }
 }

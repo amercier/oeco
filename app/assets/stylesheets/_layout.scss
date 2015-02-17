@@ -2,26 +2,38 @@
 
 @media #{$small-up} {
   body {
-    margin: $oeco-vertical-padding-small $oeco-horizontal-padding-small;
+    margin: $oeco-vertical-padding-small $oeco-horizontal-padding-small 0  $oeco-horizontal-padding-small;
   }
 
   .oeco-container {
     font-size: rem-calc($oeco-font-size-small);
   }
+
+  .oeco-content {
+    margin-top: $oeco-vertical-padding-small;
+  }
 }
 
 @media #{$medium-up} {
   body {
-    margin: $oeco-vertical-padding-medium $oeco-horizontal-padding-medium;
+    margin: $oeco-vertical-padding-medium $oeco-horizontal-padding-medium 0  $oeco-horizontal-padding-medium;
   }
 
   .oeco-container {
     font-size: rem-calc($oeco-font-size-medium);
   }
+
+  .oeco-content {
+    margin-top: $oeco-vertical-padding-medium;
+  }
 }
 
 @media #{$large-up} {
   body {
-    margin: $oeco-vertical-padding-large $oeco-horizontal-padding-large;
+    margin: $oeco-vertical-padding-large $oeco-horizontal-padding-large 0  $oeco-horizontal-padding-large;
+  }
+
+  .oeco-content {
+    margin-top: $oeco-vertical-padding-large;
   }
 }

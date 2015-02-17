@@ -9,16 +9,16 @@
 $oeco-horizontal-padding-small: 1em;
 $oeco-horizontal-padding-medium: 4em;
 $oeco-horizontal-padding-large: 10em;
-$oeco-vertical-padding-small: 4em;
-$oeco-vertical-padding-medium: 4em;
+$oeco-vertical-padding-small: 2em;
+$oeco-vertical-padding-medium: 3em;
 $oeco-vertical-padding-large: 4em;
 $oeco-logo-height: 130px;
 
 // Typography
-$oeco-font-size-small: 16;
+$oeco-font-size-small: 12;
 $oeco-font-size-medium: 15;
 
-$oeco-header-font-size-small: 18;
+$oeco-header-font-size-small: 14;
 $oeco-header-font-size-medium: 16;
 
 // Zurb Foundation settings
@@ -83,10 +83,11 @@ $oeco-header-font-size-medium: 16;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+$rem-base: 14px;
+$base-font-size: 14px;
 
 // The $base-font-size is 100% while $base-line-height is 150%
-$base-line-height: 24px;
+$base-line-height: 1.7;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
@@ -112,9 +113,9 @@ $font-family-sans-serif: Helvetica Neue, Helvetica, Arial, sans-serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-$font-weight-light: 100 !default;
-$font-weight-normal: 300 !default;
-$font-weight-bold: 500 !default;
+$font-weight-lighter: lighter !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -228,11 +229,11 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
+$h1-font-size: rem-calc(22);
+$h2-font-size: rem-calc(22);
+$h3-font-size: rem-calc(14);
+// $h4-font-size: rem-calc(16);
+// $h5-font-size: rem-calc(16);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
