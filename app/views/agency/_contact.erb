@@ -1,0 +1,42 @@
+<aside class="oeco-contact" itemscope itemtype="http://schema.org/Organization">
+
+  <figure class="oeco-contact-figure row">
+    <div class="small-12 columns">
+      <%= image_tag('team.jpg', size: "320x320", alt: 'L\'équipe d\'oeco architectes') %>
+    </div>
+    <figcaption class="oeco-contact-caption small-12 columns">
+      <ul class="no-bullet">
+        <li class="small-4 columns">Vanessa Larrère</li>
+        <li class="small-4 columns">Claire Furlan</li>
+        <li class="small-4 columns">Coralie Bouscal</li>
+      </ul>
+    </figcaption>
+  </figure>
+
+  <div class="oeco-contact-details row">
+    <h2 itemprop="name">ŒCO Architectes</h2>
+
+    <h3>Adresse</h3>
+    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">13 Rue Delpy</span>
+      <br>
+      <span itemprop="postalCode">31000</span>
+      <span itemprop="addressLocality">Toulouse</span>
+    </p>
+
+    <h3>Téléphone</h3>
+    <p class="telephone" itemprop="phone">05 31 98 98 42</p>
+
+    <h3>Adresse électronique</h3>
+    <p>
+      <a href="mailto:agence@oeco-architectes.com" itemprop="email">agence@oeco-architectes.com</a>
+    </p>
+
+    <span class="oeco-contact-geoloc" itemprop="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
+      <h3>Coordonnées GPS</h3>
+      <span itemprop="latitude">43.59731</span>,
+      <span itemprop="longitude">1.45402</span>
+    </span>
+  </div>
+
+</aside>

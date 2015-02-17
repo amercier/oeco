@@ -1,3 +1,25 @@
 // Place all the styles related to the Agency controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "settings";
+
+.oeco-contact {
+
+  .oeco-contact-caption {
+    margin: 0.5rem 0;
+    li {
+      color: #999;
+      font-size: rem-calc(22);
+      font-weight: lighter;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+
+  .oeco-contact-geoloc {
+    position: absolute;
+    top: -10000px;
+  }
+
+}
