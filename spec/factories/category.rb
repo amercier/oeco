@@ -7,7 +7,7 @@ FactoryGirl.define do
     name 'Alternate category'
   end
 
-  factory :invalid_category, parent: :category do
+  factory :category_with_empty_name, parent: :category do
     name ''
   end
 end

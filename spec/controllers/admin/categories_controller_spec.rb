@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Admin::CategoriesController, type: :controller do
 
+
   describe 'GET #index' do
     it 'assigns @categories' do
       get :index
@@ -13,6 +14,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       expect(response).to render_template(:index)
     end
   end
+
 
   describe 'GET #show' do
     it 'does not assign the requested category to @category' do
@@ -27,6 +29,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     end
   end
 
+
   describe 'GET #new' do
     it 'assigns an empty name to the new category' do
       get :new
@@ -38,6 +41,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       expect(response).to render_template(:new)
     end
   end
+
 
   describe 'POST #create' do
     context 'with valid attributes' do
@@ -56,62 +60,126 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     context 'with empty name' do
       it 'does not save the new category' do
         expect {
-          post :create, category: attributes_for(:invalid_category)
+          post :create, category: attributes_for(:category_with_empty_name)
         }.to_not change(Category,:count)
       end
 
       it 're-renders the new view' do
-        post :create, category: attributes_for(:invalid_category)
+        post :create, category: attributes_for(:category_with_empty_name)
         expect(response).to render_template :new
+      end
+
+      it 'displays an error message' do
+        post :create, category: attributes_for(:category_with_empty_name)
+        expect(assigns(:category).errors.messages).to eq({ name: ['can\'t be blank'] })
+        expect(flash).to be_empty
+      end
+    end
+
+    context 'with an existing name' do
+      before :each do
+        create(:category)
+      end
+
+      it 'does not save the new category' do
+        expect {
+          post :create, category: attributes_for(:category)
+        }.to_not change(Category,:count)
+      end
+
+      it 're-renders the new view' do
+        post :create, category: attributes_for(:category)
+        expect(response).to render_template :new
+      end
+
+      it 'displays an error message' do
+        post :create, category: attributes_for(:category)
+        expect(assigns(:category).errors.messages).to eq({ name: ['has already been taken'] })
+        expect(flash).to be_empty
       end
     end
   end
 
+
   describe 'PUT #update' do
+    before :each do
+      @category = create(:category)
+    end
+
     context 'with valid attributes' do
       it 'assigns the requested category to @category' do
-        category = create(:category)
-        put :update, id: category, category: attributes_for(:alternate_category)
-        expect(assigns(:category)).to eq(category)
+        put :update, id: @category, category: attributes_for(:alternate_category)
+        expect(assigns(:category)).to eq(@category)
       end
 
       it 'change category\'s attributes' do
-        category = create(:category)
         alternate_category = attributes_for(:alternate_category)
-        put :update, id: category, category: alternate_category
-        category.reload
-        expect(category.name).to eq(alternate_category[:name])
+        put :update, id: @category, category: alternate_category
+        @category.reload
+        expect(@category.name).to eq(alternate_category[:name])
       end
 
       it 'redirects to the updated category' do
-        category = create(:category)
-        put :update, id: category, category: attributes_for(:alternate_category)
-        expect(response).to redirect_to(admin_category_path(category))
+        put :update, id: @category, category: attributes_for(:alternate_category)
+        expect(response).to redirect_to(admin_category_path(@category))
       end
     end
 
-    context 'with invalid attributes' do
+    context 'with an empty name' do
       it 'assigns the requested category to @category' do
-        category = create(:category)
-        put :update, id: category, category: attributes_for(:invalid_category)
-        expect(assigns(:category)).to eq(category)
+        put :update, id: @category, category: attributes_for(:category_with_empty_name)
+        expect(assigns(:category)).to eq(@category)
       end
 
       it 'does not change category\'s attributes' do
-        category = create(:category)
-        invalid_category = attributes_for(:invalid_category)
-        put :update, id: category, category: invalid_category
-        category.reload
-        expect(category.name).not_to eq(invalid_category[:name])
+        invalid_category = attributes_for(:category_with_empty_name)
+        put :update, id: @category, category: invalid_category
+        @category.reload
+        expect(@category.name).not_to eq(invalid_category[:name])
       end
 
       it 're-renders the edit view' do
-        category = create(:category)
-        put :update, id: category, category: attributes_for(:invalid_category)
+        put :update, id: @category, category: attributes_for(:category_with_empty_name)
         expect(response).to render_template(:edit)
+      end
+
+      it 'displays an error message' do
+        put :update, id: @category, category: attributes_for(:category_with_empty_name)
+        expect(assigns(:category).errors.messages).to eq({ name: ['can\'t be blank'] })
+        expect(flash).to be_empty
+      end
+    end
+
+    context 'with an existing name' do
+      before :each do
+        create(:alternate_category)
+      end
+
+      it 'assigns the requested category to @category' do
+        put :update, id: @category, category: attributes_for(:alternate_category)
+        expect(assigns(:category)).to eq(@category)
+      end
+
+      it 'does not change category\'s attributes' do
+        invalid_category = attributes_for(:alternate_category)
+        put :update, id: @category, category: invalid_category
+        @category.reload
+        expect(@category.name).not_to eq(invalid_category[:name])
+      end
+
+      it 're-renders the edit view' do
+        put :update, id: @category, category: attributes_for(:alternate_category)
+        expect(response).to render_template(:edit)
+      end
+
+      it 'displays an error message' do
+        put :update, id: @category, category: attributes_for(:alternate_category)
+        expect(assigns(:category).errors.messages).to eq({ name: ['has already been taken'] })
+        expect(flash).to be_empty
       end
     end
   end
+
 
   describe 'DELETE destroy' do
     it 'deletes the category' do
