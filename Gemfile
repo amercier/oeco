@@ -79,13 +79,22 @@ end
 # Development & testing
 # =====================
 
-# CodeClimate code coverage
-gem "codeclimate-test-reporter", group: :test
+group :test do
 
-# Coveralls code coverage
-gem 'coveralls', group: :test
+  # CodeClimate code coverage
+  gem "codeclimate-test-reporter"
+
+  # Coveralls code coverage
+  gem 'coveralls'
+
+end
 
 group :development, :test do
+
+  # RSpec
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
