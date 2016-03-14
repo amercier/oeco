@@ -12,10 +12,10 @@ Code analysis is performed by [Code Climate](https://codeclimate.com/).
 Code coverage is reported to [Coveralls](https://coveralls.io/).
 Dependency tracking is managed by [Gemnasium](https://gemnasium.com/).
 
-[![Build Status](http://img.shields.io/travis/amercier/oeco/master.svg?style=flat-square)](https://travis-ci.org/amercier/oeco/builds)
-[![Code Climate](http://img.shields.io/codeclimate/github/amercier/oeco.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
-[![Test Coverage](http://img.shields.io/coveralls/amercier/oeco/master.svg?style=flat-square)](https://coveralls.io/r/amercier/oeco?branch=master)
-[![Dependency Status](http://img.shields.io/gemnasium/amercier/oeco.svg?style=flat-square)](https://gemnasium.com/amercier/oeco)
+[![Build Status](http://img.shields.io/travis/amercier/oeco-ruby/master.svg?style=flat-square)](https://travis-ci.org/amercier/oeco-ruby/builds)
+[![Code Climate](http://img.shields.io/codeclimate/github/amercier/oeco-ruby.svg?style=flat-square)](https://codeclimate.com/github/amercier/oeco)
+[![Test Coverage](http://img.shields.io/coveralls/amercier/oeco-ruby/master.svg?style=flat-square)](https://coveralls.io/r/amercier/oeco-ruby?branch=master)
+[![Dependency Status](http://img.shields.io/gemnasium/amercier/oeco-ruby.svg?style=flat-square)](https://gemnasium.com/amercier/oeco-ruby)
 
 Pushes on master branch are automatically deployed on
 [http://oeco-staging.herokuapp.com](http://oeco-staging.herokuapp.com).
