@@ -12,7 +12,7 @@ deploy:
 - provider: heroku
   api_key:
     secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
-  app: oeco-staging
+  app: oeco-ruby-staging
   on:
     all_branches: true
     tags: false
@@ -24,7 +24,7 @@ deploy:
 - provider: heroku
   api_key:
     secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
-  app: oeco
+  app: oeco-ruby
   on:
     all_branches: true
     tags: true
