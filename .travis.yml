@@ -7,8 +7,7 @@ before_script:
   - bin/rake db:migrate RAILS_ENV=test
 deploy:
   - provider: heroku
-    api_key:
-      secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
+    api_key: $HEROKU_AUTH_TOKEN
     app: oeco-ruby-staging
     on:
       all_branches: true
@@ -19,8 +18,7 @@ deploy:
       - restart
       - rake cleanup
   - provider: heroku
-    api_key:
-      secure: Frb5UjVgjJqPrtaao4vcQwvRYlKGy2Eg/8r6+ejeX7rSrwwVhZGuKWAv4Qpk8xNu+T4DK2ZEBgzxpfFfw3xhlLfynjrezbqHyFKDEatDEu2KPmUEwpCL/TvQehwqBJmaWCKWSxFAgwl7ODQj0vezna94GjvulQg7eO3rGxZK0Rk=
+    api_key: $HEROKU_AUTH_TOKEN
     app: oeco-ruby
     on:
       all_branches: true
@@ -30,4 +28,4 @@ deploy:
       - rake db:migrate
       - restart
       - rake cleanup
-after_deploy: curl -sf -o /dev/null -w '%{http_code}\n' "http://$([ "$TRAVIS_TAG" == "" ] && echo "$OECO_STAGING_USERNAME:$OECO_STAGING_PASSWORD@oeco-staging" || echo "oeco").herokuapp.com/" || exit $?
+after_deploy: curl -sf -o /dev/null -w '%{http_code}\n' "http://$([ "$TRAVIS_TAG" == "" ] && echo "$OECO_STAGING_USERNAME:$OECO_STAGING_PASSWORD@oeco-ruby-staging" || echo "oeco-ruby").herokuapp.com/" || exit $?
