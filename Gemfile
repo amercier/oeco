@@ -54,6 +54,9 @@ gem 'jquery-rails', '~> 4.0.3'
 # Database
 # ========
 
+# SQLite is used for development and tests
+gem 'sqlite3'
+
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
 
